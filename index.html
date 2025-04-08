@@ -1,19 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Mode Demo</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+        }
+
+        body.dark-mode {
+            --bg: #121212;
+            --text: #f0f0f0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .logo-grid img {
+            width: 100%;
+            max-width: 50px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            background-color: var(--text);
+            color: var(--bg);
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello Marin!</h1>
-    <h2>This is great!</h2>
-    <img src="./assets/images/logo.png" alt="Logo">
-    <img src="./assets/images/logo.png" alt="Logo">
-    <img src="./assets/images/logo.png" alt="Logo">
-    <img src="./assets/images/logo.png" alt="Logo">
-    <img src="./assets/images/logo.png" alt="Logo">
+    <h1>Hello, Marin!</h1>
+    <h2>Nice to meet you!</h2>
+
+    <div class="logo-grid">
+        <img src="./assets/images/logo.png" alt="Logo">
+        <img src="./assets/images/logo.png" alt="Logo">
+        <img src="./assets/images/logo.png" alt="Logo">
+        <img src="./assets/images/logo.png" alt="Logo">
+        <img src="./assets/images/logo.png" alt="Logo">
+    </div>
+    <br>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 
 </html>
