@@ -4,21 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode Demo</title>
+    <title>Hello, Marin</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Hello, Marin!</h1>
-    <h2>Nice to meet you!</h2>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-title">
+                <span class="site-name">Welcome</span>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="logo-grid">
-        <img src="./assets/images/logo.png" alt="Logo">
-        <img src="./assets/images/logo.png" alt="Logo">
-        <img src="./assets/images/logo.png" alt="Logo">
-    </div>
-    <br>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <header class="hero">
+        <h1>Hello, Marin!</h1>
+        <h2>Nice to meet you!</h2>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <section class="logo-section">
+        <div class="logo-grid">
+            <img src="./assets/images/logo.png" alt="Logo">
+            <img src="./assets/images/logo.png" alt="Logo">
+            <img src="./assets/images/logo.png" alt="Logo">
+        </div>
+    </section>
 
 
     <script>

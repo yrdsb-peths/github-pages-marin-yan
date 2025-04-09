@@ -75,3 +75,64 @@ button {
     border: none;
     border-radius: 5px;
 }
+
+.site-header {
+    background-color: #e0e7ff; /* pastel blue-violet for contrast */
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--accent);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: var(--accent);
+}
+
+.dark-mode .site-header {
+    background-color: #4e4e4a; /* warm peach-orange for contrast */
+}
+
+.dark-mode .site-nav a:hover {
+    color: #1e90ff;
+}
